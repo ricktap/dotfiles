@@ -81,7 +81,7 @@ function install_zsh () {
 }
 
 function install_homebrew () {
-  if test "$(uname)" = "Darwin" && test ! $(which brew)
+  if test "$(uname)" = "Darwin" && test ! "$(command -v brew)"
   then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
